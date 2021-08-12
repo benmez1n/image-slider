@@ -4,12 +4,12 @@ const items = Array.from(document.querySelectorAll('#slider-container img')),
 let currentItem = 0;
 nextBtn.onclick = ()=>{
     if(currentItem==items.length)currentItem=0
-    remover;
+    remover();
     items[currentItem++].classList.add("active");
 }
 prvBtn.onclick = ()=>{
     if(currentItem==-1)currentItem=items.length-1
-    remover;
+    remover();
     items[currentItem--].classList.add("active");
 }
 remover = ()=>{items.forEach(element=>element.classList.remove("active"))}
