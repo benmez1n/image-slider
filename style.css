@@ -1,14 +1,6 @@
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding: 0;
-}
-#container{display: flex;width:900px;margin:60px auto;}
-#slider-container{
-    position: relative;
-    width:400px;
-    margin:0 auto;
-}
+*{box-sizing: border-box;margin:0;padding: 0;}
+#container{display: flex;width:900px;margin:60px auto;height: 240px;}
+#slider-container{position: relative;width:400px;margin:0 auto;}
 #slider-container img{
     border: solid 2px black;
     border-radius: 10px;
@@ -20,13 +12,31 @@
 }
 #slider-container img.active{opacity:1}
 button{
-    font-size: 32px;
     color:white;
+    font-size: 32px;
     border:none;
     width:80px;
+    height: 50px;
     padding:5px;
     background-color: rgb(25, 92, 25);
     margin-top:110px;
     cursor: pointer;
 }
-button:hover{opacity: 0.7;}
+#pagination-container{
+    width:500px;
+    height: 30px;
+    margin:80px auto;
+    background-color: transparent;
+}
+#pagination-list{list-style: none;padding-inline-start: 0;margin-left:35px;}
+#pagination-list li{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    padding-top:4px;
+    border:solid 1px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+#pagination-list li.active{background-color: green;color:white}
